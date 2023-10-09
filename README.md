@@ -117,6 +117,43 @@ El gráfico también muestra que el número de accidentes aéreos ha sido más v
 
 En general, el gráfico muestra que la seguridad de la aviación ha mejorado significativamente en los últimos años. Sin embargo, es importante seguir tomando medidas para reducir aún más el número de accidentes aéreos.
 
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/51d776c2-fdc6-47b9-b7ce-69f8372468ee)
+
+El gráfico muestra el total de fallecidos por operador. El segmento azul del gráfico representa el porcentaje de fallecidos por operadores  militares, mientras que el segmento naranja representa el porcentaje de fallecidos por operadores  no militares.
+
+El gráfico muestra que el 80,8% de los fallecidos estaban en un operador  no militares, mientras que el 19,2% estban en operadores  militares. 
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/35df4e2b-2f20-4c44-9b14-a23340ee2de6)
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/6b2a4d7d-65e8-431a-918f-c71749d370bb)
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/5d65b151-d089-49b5-bf80-d6d57da36b79)
+
+El gráfico muestra que el porcentaje de pasajeros fallecidos ha disminuido a lo largo del tiempo. En la decada de  1920, el porcentaje de pasajeros fallecidos era del 20%. En 2020, ese número se ha reducido a menos del 5%.
+
+Esta disminución se debe a una serie de factores, entre los que se incluyen:
+
+Mejoras en la seguridad de las aeronaves.
+Mejoras en las prácticas de vuelo.
+Mejoras en la respuesta a los accidentes.
+
+
+
+MÉTRICAS
+
+
+
+
+KPIS
+
+KPIS: Un KPI (Key Performance Indicator) es una medida cuantificable que muestra cómo efectivamente se están cumpliendo los objetivos de una empresa. Los KPIs son utilizados para medir el rendimiento de la empresa en relación a sus objetivos estratégicos más importantes.
+
+
+
+
+
+
+
 
 
 
