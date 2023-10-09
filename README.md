@@ -313,6 +313,11 @@ Podemos ver que la meta se cumplio, hay una disminución del 13 % en la mortanda
 
 DASHBOARD
 
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/aa3245c0-be78-462a-a559-5d85df505c8e)
+
+
+CONCLUSIÓN
+
 
 
 
