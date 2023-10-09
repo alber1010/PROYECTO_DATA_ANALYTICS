@@ -318,7 +318,14 @@ DASHBOARD
 
 CONCLUSIÓN
 
+La tasa de mortalidad en accidentes aéreos también ha disminuido. En 1908, el 90% de los accidentes aéreos resultaron en muertes, mientras que en 2021 solo el 50% de los accidentes aéreos resultaron en muertes. Esto representa una disminución del 40%.
 
+Estas mejoras en la seguridad aérea se deben a una serie de factores, entre los que se incluyen:
+
+El desarrollo de nuevas tecnologías y procedimientos de seguridad.
+La mejora de la formación de pilotos y personal de mantenimiento.
+La intensificación de los esfuerzos de investigación de accidentes.
+A pesar de estos avances, es importante tener en cuenta que los accidentes aéreos siguen siendo una posibilidad. Sin embargo, las probabilidades de que ocurra un accidente aéreo son muy bajas.
 
 
 
