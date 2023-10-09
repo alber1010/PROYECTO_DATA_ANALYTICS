@@ -234,6 +234,86 @@ KPIS
 
 KPIS: Un KPI (Key Performance Indicator) es una medida cuantificable que muestra cómo efectivamente se están cumpliendo los objetivos de una empresa. Los KPIs son utilizados para medir el rendimiento de la empresa en relación a sus objetivos estratégicos más importantes.
 
+# Agregamos una columna con el total de accidentes por año
+df_1['total_accidentes'] = df_1.groupby('ano_accidente')['ano_accidente'].transform('size')
+# Filtramos los datos para los últimos 10 años
+df_last_10_years = df_1[df_1['ano_accidente'] >= 2011]
+
+# Filtramos los datos para la década anterior
+df_previous_decade = df_1[(df_1['ano_accidente'] >= 2000) & (df_1['ano_accidente'] <= 2010)]
+
+# Calculamos la tasa de fatalidad de la tripulación para los últimos 10 años
+tasa_fatalidad_tripulacion_last_10_years = df_last_10_years['fallecidos_tripulacion'].sum() / df_last_10_years['total_accidentes'].sum()
+
+# Calculamos la tasa de fatalidad de la tripulación para la década anterior
+tasa_fatalidad_tripulacion_previous_decade = df_previous_decade['fallecidos_tripulacion'].sum() / df_previous_decade['total_accidentes'].sum()
+
+# Calculamos la disminución de la tasa de fatalidad de la tripulación
+disminucion_tasa_fatalidad_tripulacion = (  tasa_fatalidad_tripulacion_previous_decade - tasa_fatalidad_tripulacion_last_10_years)/ tasa_fatalidad_tripulacion_previous_decade
+
+# Imprimimos los resultados
+print('Tasa de fatalidad de la tripulación para los últimos 10 años:', tasa_fatalidad_tripulacion_last_10_years)
+print('Tasa de fatalidad de la tripulación para la década anterior:', tasa_fatalidad_tripulacion_previous_decade)
+print('Disminución de la tasa de fatalidad de la tripulación:', disminucion_tasa_fatalidad_tripulacion)
+
+Tasa de fatalidad de la tripulación para los últimos 10 años: 0.16071796987827522
+Tasa de fatalidad de la tripulación para la década anterior: 0.06303437913640754
+Disminución de la tasa de fatalidad de la tripulación: -1.5496875210030803
+
+
+Podemos observar que el objetivo no se cumplio debido a que la variación en la tasa de fatalidad fue de -154%, observo un probolema con este KPI, se están tomando todos los accidentes, en vez de tomar los tripulantes abordo, por eso da ese número lo cual significaría que ya no hay muertes por tripulantes. 
+
+# Filtramos los datos para los últimos 10 años
+df_last_10_years = df_1[df_1['ano_accidente'] >= 2011]
+
+# Filtramos los datos para la década anterior
+df_previous_decade = df_1[(df_1['ano_accidente'] >= 2000) & (df_1['ano_accidente'] <= 2010)]
+
+# Calculamos la tasa de fatalidad de la tripulación para los últimos 10 años
+tasa_fatalidad_tripulacion_last_10_years = df_last_10_years['fallecidos_tripulacion'].sum() / df_last_10_years['tripulacion_a_bordo'].sum()
+
+# Calculamos la tasa de fatalidad de la tripulación para la década anterior
+tasa_fatalidad_tripulacion_previous_decade = df_previous_decade['fallecidos_tripulacion'].sum() / df_previous_decade['tripulacion_a_bordo'].sum()
+
+# Calculamos la disminución de la tasa de fatalidad de la tripulación
+disminucion_tasa_fatalidad_tripulacion = (  tasa_fatalidad_tripulacion_previous_decade - tasa_fatalidad_tripulacion_last_10_years)/ tasa_fatalidad_tripulacion_previous_decade
+
+# Imprimimos los resultados
+print('Tasa de fatalidad de la tripulación para los últimos 10 años:', tasa_fatalidad_tripulacion_last_10_years)
+print('Tasa de fatalidad de la tripulación para la década anterior:', tasa_fatalidad_tripulacion_previous_decade)
+print('Disminución de la tasa de fatalidad de la tripulación:', disminucion_tasa_fatalidad_tripulacion)
+
+Tasa de fatalidad de la tripulación para los últimos 10 años: 0.8191377497371188
+Tasa de fatalidad de la tripulación para la década anterior: 0.7838078291814946
+Disminución de la tasa de fatalidad de la tripulación: -0.045074722706607985
+
+
+Ahora los datos tienen más sentido, se mira el porcentaje de mortalidad de la tripulación dado el número de tripulantes a bordo, hay una disminución del 4%, pero no alcanza a cumplirse el objetivo del 10%
+
+Un segundo KPI es ver si ha disminuido en un 10 % la tasa de mortalidad de los pasajeros, a diferencia del primero se toma al número de fallecidos por pasajeros/ el total de pasajeros ab.
+
+# Filtramos los datos para el año actual y el año anterior
+df_ano_actual = df_1[df_1['ano_accidente'] == 2021]
+df_ano_anterior = df_1[df_1['ano_accidente'] == 2020]
+
+# Calculamos la tasa de mortalidad en el transporte aéreo para el año actual y el año anterior
+tasa_mortalidad_transporte_aereo_ano_actual = df_ano_actual['fallecidos_pasajeros'].sum() / df_ano_actual['pasajeros_a_bordo'].sum()
+tasa_mortalidad_transporte_aereo_ano_anterior = df_ano_anterior['fallecidos_pasajeros'].sum() / df_ano_anterior['pasajeros_a_bordo'].sum()
+
+# Calculamos la variación anual de la tasa de mortalidad en el transporte aéreo
+variacion_anual_tasa_mortalidad_transporte_aereo = (tasa_mortalidad_transporte_aereo_ano_anterior - tasa_mortalidad_transporte_aereo_ano_actual) / tasa_mortalidad_transporte_aereo_ano_anterior
+
+# Imprimimos el resultado
+print('Variación anual de la tasa de mortalidad en el transporte aéreo:', variacion_anual_tasa_mortalidad_transporte_aereo)
+
+Variación anual de la tasa de mortalidad en el transporte aéreo: -0.1325998841922408
+
+Podemos ver que la meta se cumplio, hay una disminución del 13 % en la mortandad de los pasajeros.
+
+
+DASHBOARD
+
+
 
 
 
