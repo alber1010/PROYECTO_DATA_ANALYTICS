@@ -141,6 +141,92 @@ Mejoras en la respuesta a los accidentes.
 
 MÉTRICAS
 
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/ef19043d-e92e-417d-9bd4-f54626465db9)
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/e59adf4f-9c14-4501-9a57-ab380b4a3635)
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/53925775-49f4-4d8a-9391-56d9ba9e8037)
+
+![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/5f0cf134-4f75-4d05-a265-0190e013b671)
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tipo_aeronave</th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>other</td>
+      <td>1166</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>McDonnell Douglas</td>
+      <td>1124</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Boeing</td>
+      <td>411</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Lockheed Martin</td>
+      <td>352</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>De Havilland</td>
+      <td>293</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Antonov</td>
+      <td>285</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Ilyushin</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Fokker</td>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Tupolev</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Vickers</td>
+      <td>93</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 
 
 
