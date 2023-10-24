@@ -17,18 +17,7 @@ La base de datos contiene información sobre 5008 accidentes aéreos que ocurrie
 
 ![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/34b3d5e5-598e-447c-8742-60549b733e71)
 
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/99e1f4f1-5867-4fa9-8472-d765f1f8a690)
 
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/88291c66-f6c0-4210-947d-d2342309638b)
-
-Ahora elimino columnas que no voy a usar para el análisis dado que no proporcionan información relevante.
-df_1 = df_1.drop(["numero_vuelo","matricula", "numero_serie", "Unnamed: 0", "ID", "origen_destino", "ruta_vuelo",'resumen_accidente','fallecidos_en_tierra'], axis=1)
-
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/3c53b4dc-9f10-4a15-af49-42f0ec359e13)
-
-Agrupamos la columna operador por Militar y no militar, para mejor manejo de los datos.
-
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/e7d234a8-9a18-494c-be86-6f34e8586543)
 
 
 IDENTIFICACIÓN DE RELACIONES ENTRE VARIABLES.
@@ -36,11 +25,7 @@ IDENTIFICACIÓN DE RELACIONES ENTRE VARIABLES.
 
 Ahora para ver la relación entre las variables podemos hacer una matriz de correlación, dado que tenemos columnas que tienen diferentes tipos de datos entre sí, haremos sub-data set para poder hacer la matriz de correlación, además crearemos un sub-data set que contenga las columnas categóricas códificadas para hacer una matriz de correlación con el mayor número de columnas posibles, así veremos las relaciones entre las columnas.
 
-El primer subset lo haremos con las variables númericas, el cual será, con las columnas que contienen datos de las personas y el año y el mes del accidente.
 
-El segundo subset lo haremos codificando las variables categóricas, operador, tipo de aeronave, ruta, y también usaremos las anteriores variables númericas-
-
-Por último pasaremos a identificar outliers con diferentes tipos de gráficos para determinadas columnas, las analizaremos cada una.
 
 ![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/bb6e4f03-826d-41d7-9e14-9a06a7120fd2)
 
@@ -48,9 +33,7 @@ La correlación entre el año del accidente y el mes del accidente es muy débil
 
 La correlación entre el número total de personas a bordo y el número total de fallecidos es fuerte (0.739646). Esto significa que existe una relación positiva entre estas dos variables, lo que indica que cuanto mayor es el número de personas a bordo, mayor es el número de fallecidos en un accidente aéreo.
 
-La correlación entre el número de pasajeros a bordo y el número de fallecidos de pasajeros también es fuerte (0.738965). Esto significa que existe una relación positiva entre estas dos variables, lo que indica que cuanto mayor es el número de pasajeros a bordo, mayor es el número de fallecidos de pasajeros en un accidente aéreo.
 
-La correlación entre el número de tripulantes a bordo y el número de fallecidos de tripulantes también es fuerte (0.720937). Esto significa que existe una relación positiva entre estas dos variables, lo que indica que cuanto mayor es el número de tripulantes a bordo, mayor es el número de fallecidos de tripulantes en un accidente aéreo.
 
 
 IDENTIFICACIÓN DE OUTLIERS.
@@ -77,13 +60,6 @@ Es fácil de calcular y de interpretar.
 5007    0.163027
 Name: total_fallecidos, Length: 5008, dtype: float64
 
-Para el z_score uso la columna total fallecidos, por cuestiones de etica, pues lo importante es el total de personas que han muerto sin importar si son de la tripulación o pasajeros, hacer la diferencia en este caso no arroja mayor información.
-
-En este caso, el z-score de cada punto de datos representa el número de desviaciones estándar que se encuentra por debajo de la media. Por ejemplo, el z-score de -0.608393 en la fila 0 indica que el valor de total_fallecidos en esa fila es 0.608393 desviaciones estándar por debajo de la media.
-
-Como se puede apreciar, la mayoría de los z-scores son negativos, lo que indica que la mayoría de los valores de total_fallecidos son inferiores a la media. Los únicos valores positivos son los de las filas 5006 y 5007, que indican que los valores de total_fallecidos en esas filas son superiores a la media.
-
-En este caso, hay dos outliers en el data frame, uno en la fila 5006 y otro en la fila 5007. Estos outliers podrían representar accidentes aéreos muy graves con un número inusualmente alto de víctimas. Al observar el Data Frame df_1 podemos ver que esto se debe a que había un gran número de personas abordo.
 
 
 
@@ -101,25 +77,6 @@ El gráfico también muestra que el número de accidentes aéreos ha sido más v
 
 En general, el gráfico muestra que la seguridad de la aviación ha mejorado significativamente en los últimos años. Sin embargo, es importante seguir tomando medidas para reducir aún más el número de accidentes aéreos.
 
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/51d776c2-fdc6-47b9-b7ce-69f8372468ee)
-
-El gráfico muestra el total de fallecidos por operador. El segmento azul del gráfico representa el porcentaje de fallecidos por operadores  militares, mientras que el segmento naranja representa el porcentaje de fallecidos por operadores  no militares.
-
-El gráfico muestra que el 80,8% de los fallecidos estaban en un operador  no militares, mientras que el 19,2% estban en operadores  militares. 
-
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/35df4e2b-2f20-4c44-9b14-a23340ee2de6)
-
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/6b2a4d7d-65e8-431a-918f-c71749d370bb)
-
-![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/5d65b151-d089-49b5-bf80-d6d57da36b79)
-
-El gráfico muestra que el porcentaje de pasajeros fallecidos ha disminuido a lo largo del tiempo. En la decada de  1920, el porcentaje de pasajeros fallecidos era del 20%. En 2020, ese número se ha reducido a menos del 5%.
-
-Esta disminución se debe a una serie de factores, entre los que se incluyen:
-
-Mejoras en la seguridad de las aeronaves.
-Mejoras en las prácticas de vuelo.
-Mejoras en la respuesta a los accidentes.
 
 
 
