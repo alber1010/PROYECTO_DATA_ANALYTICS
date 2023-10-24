@@ -10,39 +10,7 @@ TRANSFORMACIÓN DE LOS DATOS.
 
 La base de datos contiene información sobre 5008 accidentes aéreos que ocurrieron entre 1908 y 2023, renombro todas las columnas y creo un nuevo data frame para mayor entendimiento.
 
-fecha: La fecha del accidente en formato de texto.
 
-HORA declarada: La hora reportada del accidente
-
-Ruta: El origen y destino del vuelo cuando aplica
-
-OperadOR: Si el vuelo era militar, comercial, privado, etc.
-
-flight_no: Número de vuelo cuando aplica
-
-route: Otra columna que parece indicar la ruta del vuelo
-
-ac_type: Tipo de aeronave (avión, dirigible, etc)
-
-registration: Matrícula o registro de la aeronave
-
-cn_ln: Número de serie de la aeronave
-
-all_aboard: Cantidad total de personas a bordo
-
-PASAJEROS A BORDO: Cantidad de pasajeros
-
-crew_aboard: Cantidad de tripulación
-
-cantidad de fallecidos: Cantidad total de fallecidos
-
-passenger_fatalities: Cantidad de pasajeros fallecidos
-
-crew_fatalities: Cantidad de tripulación fallecida
-
-ground: Cantidad de fallecidos en tierra
-
-summary: Resumen del accidente
 
 ![imagen](https://github.com/alber1010/PROYECTO_DATA_ANALYTICS/assets/112127531/bc06e116-1abf-4fc3-90f2-310e70f0fac2)
 
